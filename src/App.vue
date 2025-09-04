@@ -1,52 +1,53 @@
-<!-- <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template>
+  <div class="app-container font-sans text-white">
+    <!-- Sidebar -->
+    <SideBar />
+
+    <!-- Main content -->
+    <main class="w-full space-y-40">
+      <!-- <HeroSection id="hero" /> -->
+      <AboutSection id="about" />
+      <SkillsSection id="skills" />
+      <ProjectsSection id="projects" />
+      <ContactSection id="contact" />
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from '@/components/SideBar.vue'
+// import HeroSection from '@/components/HeroSection.vue'
+import AboutSection from '@/components/AboutSection.vue'
+import SkillsSection from '@/components/SkillsSection.vue'
+import ProjectsSection from '@/components/ProjectsSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar,
+    // HeroSection,
+    AboutSection,
+    SkillsSection,
+    ProjectsSection,
+    ContactSection
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app-container {
+  /* display: flex; */
+  background: linear-gradient(to bottom, #52648f, #63799c); /* dark gradient background */
+  min-height: 100vh;
 }
-</style> -->
+/* Push main content to the right of sidebar */
+.ml-20 {
+  margin-left: 80px; /* matches sidebar width */
+}
 
-
-<template>
-  <div id="app">
-    <AppNavbar />
-    <HeroBanner />
-    <AboutSection />
-    <ProjectList />
-    <ContactSection />
-  </div>
-</template>
-
-<script>
-import AppNavbar from "./components/AppNavbar.vue";
-import HeroBanner from "./components/HeroBanner.vue";
-import AboutSection from "./components/AboutSection.vue";
-import ProjectList from "./components/ProjectList.vue";
-import ContactSection from "./components/ContactSection.vue";
-
-export default {
-  name: "App",
-  components: { AppNavbar, HeroBanner, AboutSection, ProjectList, ContactSection },
-};
-</script>
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+</style>
