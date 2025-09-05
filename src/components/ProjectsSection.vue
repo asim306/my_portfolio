@@ -1,60 +1,62 @@
 <template>
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        
-        <div class="projects-grid">
-          <div 
-            v-for="project in projects" 
-            :key="project.title"
-            class="project-card"
-          >
-            <img :src="project.image" alt="" class="project-image" />
-            <div class="overlay">
-              <h3 class="project-title">{{ project.title }}</h3>
-              <p class="project-desc">{{ project.description }}</p>
-              <a :href="project.link" target="_blank" class="project-link">View Project →</a>
-            </div>
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="projects-grid">
+        <div 
+          v-for="project in projects" 
+          :key="project.title"
+          class="project-card"
+        >
+          <img :src="project.image" alt="" class="project-image" />
+          <div class="overlay">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-desc">{{ project.description }}</p>
+            <a :href="project.link" target="_blank" class="project-link">View Project →</a>
           </div>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script setup>
-  const projects = [
-    { 
-      title: 'Portfolio Website', 
-      description: 'Built with Vue 3 + TailwindCSS. Responsive and modern UI.', 
-      link: '#', 
-      image: 'https://via.placeholder.com/600x400?text=Portfolio' 
-    },
-    { 
-      title: 'E-Commerce App', 
-      description: 'Online shopping platform with cart and payment integration.', 
-      link: '#', 
-      image: 'https://via.placeholder.com/600x400?text=E-Commerce' 
-    },
-    { 
-      title: 'Task Manager', 
-      description: 'Daily task manager app to organize your schedule.', 
-      link: '#', 
-      image: 'https://via.placeholder.com/600x400?text=Task+Manager' 
-    },
-  ]
-  </script>
-  
-  <style scoped>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import logoImg from '@/assets/logo.png'
+// import portfolioImg from '@/assets/portfolio.png'
+// import ecommerceImg from '@/assets/ecommerce.png'
+
+const projects = [
+  { 
+    title: 'Portfolio Website', 
+    description: 'Built with Vue 3 + TailwindCSS. Responsive and modern UI.', 
+    link: '#', 
+    image: logoImg
+  },
+  { 
+    title: 'E-Commerce App', 
+    description: 'Online shopping platform with cart and payment integration.', 
+    link: '#', 
+    image: logoImg
+  },
+  { 
+    title: 'Company Logo Project', 
+    description: 'Branding project showcasing a clean and modern logo design.', 
+    link: '#', 
+    image: logoImg   // using logo.png from assets
+  },
+]
+</script>
+
+<style scoped>
 .projects-section {
-  padding: 6rem 2rem; /* internal padding */
-  margin-top: 6rem;   /* space above section */
-  margin-bottom: 6rem; /* space below section */
-  /* width: 100%; */
-  background: linear-gradient(135deg, #1f2937, #111827);
+  padding: 6rem 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  background: #111;
   color: white;
 }
 
-/* Rest of your CSS remains the same */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -81,6 +83,7 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #fff;
 }
 
 .project-card:hover {
@@ -132,13 +135,13 @@
 
 .project-link {
   font-size: 1rem;
-  color: #10b981; /* green */
+  color: #10b981;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: #6ee7b7; /* lighter green */
+  color: #6ee7b7;
 }
 </style>

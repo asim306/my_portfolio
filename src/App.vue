@@ -1,10 +1,15 @@
 <template>
-  <div class="app-container font-sans text-white">
-    <!-- Sidebar -->
-    <SideBar />
+  <div class="app-container font-sans text-white flex">
+    <!-- Sidebar on the left -->
+    <div class="sidebar-container">
+      <SideBar />
+    </div>
+
+    <!-- Blank space -->
+    <div class="spacer"></div>
 
     <!-- Main content -->
-    <main class="w-full space-y-40">
+    <main class="main-content space-y-40">
       <!-- <HeroSection id="hero" /> -->
       <AboutSection id="about" />
       <SkillsSection id="skills" />
@@ -37,16 +42,29 @@ export default {
 
 <style>
 .app-container {
-  /* display: flex; */
-  background: linear-gradient(to bottom, #52648f, #63799c); /* dark gradient background */
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  background: linear-gradient(to bottom, #393d3d, #869292);
   min-height: 100vh;
-}
-/* Push main content to the right of sidebar */
-.ml-20 {
-  margin-left: 80px; /* matches sidebar width */
+  width: 100%;
 }
 
-/* Smooth scrolling for anchor links */
+/* Sidebar container */
+.sidebar-container {
+  flex-shrink: 0;
+}
+
+/* Blank space between sidebar and content */
+.spacer {
+  width: 300px; /* adjust this gap as needed */
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
 html {
   scroll-behavior: smooth;
 }

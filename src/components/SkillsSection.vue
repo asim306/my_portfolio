@@ -38,7 +38,7 @@
       level: 95,
       icon: '🖖',
       description: 'Building reactive frontend apps with Vue 2 & 3.',
-      cardGradient: 'linear-gradient(to right, #42b883, #35495e)',
+      cardGradient: 'linear-gradient(to right, #00000, #35495e)',
       barGradient: 'linear-gradient(to right, #42b883, #3a7bd5)'
     },
     {
@@ -46,7 +46,7 @@
       level: 90,
       icon: '✨',
       description: 'Strong JS fundamentals for web development.',
-      cardGradient: 'linear-gradient(to right, #f0db4f, #f7df1e)',
+      cardGradient: 'linear-gradient(to right, #00000, #f7df1e)',
       barGradient: 'linear-gradient(to right, #f0db4f, #e4c10c)'
     },
     {
@@ -54,7 +54,7 @@
       level: 85,
       icon: '🎨',
       description: 'Crafting responsive UI with Tailwind CSS.',
-      cardGradient: 'linear-gradient(to right, #38b2ac, #4fd1c5)',
+      cardGradient: 'linear-gradient(to right, #00000, #4fd1c5)',
       barGradient: 'linear-gradient(to right, #38b2ac, #06b6d4)'
     },
     {
@@ -62,7 +62,7 @@
       level: 80,
       icon: '🍃',
       description: 'Backend web development with Django & DRF.',
-      cardGradient: 'linear-gradient(to right, #0c4b33, #0a3d2f)',
+      cardGradient: 'linear-gradient(to right, #00000, #0a3d2f)',
       barGradient: 'linear-gradient(to right, #0c4b33, #16a34a)'
     },
     {
@@ -70,7 +70,7 @@
       level: 75,
       icon: '📱',
       description: 'Cross-platform apps for iOS & Android.',
-      cardGradient: 'linear-gradient(to right, #02569b, #00bcd4)',
+      cardGradient: 'linear-gradient(to right, #00000, #00bcd4)',
       barGradient: 'linear-gradient(to right, #02569b, #06b6d4)'
     },
     {
@@ -78,7 +78,7 @@
       level: 88,
       icon: '🐍',
       description: 'Data processing, scripting, and backend development.',
-      cardGradient: 'linear-gradient(to right, #306998, #FFD43B)',
+      cardGradient: 'linear-gradient(to right, #00000, #FFD43B)',
       barGradient: 'linear-gradient(to right, #306998, #facc15)'
     },
     {
@@ -86,7 +86,7 @@
       level: 95,
       icon: '📄',
       description: 'Semantic HTML structure for web pages.',
-      cardGradient: 'linear-gradient(to right, #e44d26, #f16529)',
+      cardGradient: 'linear-gradient(to right, #00000, #f16529)',
       barGradient: 'linear-gradient(to right, #e44d26, #f97316)'
     },
     {
@@ -94,7 +94,7 @@
       level: 90,
       icon: '🎨',
       description: 'Modern CSS techniques including Flex & Grid.',
-      cardGradient: 'linear-gradient(to right, #2965f1, #1e40af)',
+      cardGradient: 'linear-gradient(to right, #00000, #1e40af)',
       barGradient: 'linear-gradient(to right, #2965f1, #3b82f6)'
     },
     {
@@ -102,7 +102,7 @@
       level: 85,
       icon: '🔧',
       description: 'Version control and collaboration workflow.',
-      cardGradient: 'linear-gradient(to right, #f05032, #181717)',
+      cardGradient: 'linear-gradient(to right, #00000, #181717)',
       barGradient: 'linear-gradient(to right, #f05032, #f97316)'
     },
   ]
@@ -114,7 +114,7 @@
     margin-top: 6rem;        /* space above section */
     margin-bottom: 6rem;   /* space below section */
     /* width: 100%; */
-    background: #1a202c; /* dark background */
+    background: #111; /* dark background */
     color: white;
   }
   
@@ -135,14 +135,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
-  }
-  
+  } 
+
   .skill-card {
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid #fff; /* white border */
   }
+
   
   .skill-card:hover {
     transform: translateY(-10px);
